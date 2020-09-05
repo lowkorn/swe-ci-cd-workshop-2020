@@ -36,9 +36,5 @@ def submit():
     return render_template('success.html', first_name=first_name, last_name=last_name, id=id, tel=tel)
 
 
-def validate_first_name(data):
-    return True
-
-
 def init_app():
     return app
