@@ -12,6 +12,6 @@ def validate_id(id):
 
 
 def validate_phone_number(phone_number):
-    if len(phone_number) == 10:
+    if len(phone_number) == 10 and phone_number[0] == "0":
         return True
     return False
