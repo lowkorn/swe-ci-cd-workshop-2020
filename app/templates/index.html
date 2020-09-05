@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title>เราจะรวยด้วยกัน</title>
+  <style>
+    body {
+      background-image: url('../static/background.jpg');
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">เราจะรวยด้วยกัน</h1>
+      <h2 class="subtitle">
+        แจกเงิน <strong>5,000</strong> บาท (3 เดือน)
+      </h2>
+      <form action="{{ url_for('submit') }}" method="post">
+
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label">ชื่อ</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="first_name">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label">นามสกุล</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="last_name">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label">เลขประจำตัว</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="id">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label">เบอร์โทรศัพท์</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="tel">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="field is-horizontal">
+          <div class="field-label">
+            <label class="label">เบอร์โทรศัพท์</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="tel">
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <button class="button is-success">ส่งข้อมูล</button>
+
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
