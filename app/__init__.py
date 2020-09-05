@@ -18,18 +18,18 @@ def submit():
     tel = data['tel']
 
     has_invalid_input = False
-    error_message = ""
+    error_message = []
     if validate_name(first_name) is not True:
-        error_message = "กรุณากรอกชื่อให้ถูกต้อง"
+        error_message.append('กรุณากรอกชื่อให้ถูกต้อง')
         has_invalid_input = True
     if validate_name(last_name) is not True:
-        error_message = "กรุณากรอกนามสกุลให้ถูกต้อง"
+        error_message.append('กรุณากรอกนามสกุลให้ถูกต้อง')
         has_invalid_input = True
     if validate_id(id) is not True:
-        error_message = "กรุณากรอกเลขประจำตัวให้ถูกต้อง"
+        error_message.append('กรุณากรอกเลขประจำตัวให้ถูกต้อง')
         has_invalid_input = True
     if validate_phone_number(tel) is not True:
-        error_message = "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง"
+        error_message.append('กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง')
         has_invalid_input = True
     if has_invalid_input:
         return render_template('error.html', message=error_message)
